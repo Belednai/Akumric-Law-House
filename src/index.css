@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add to top of file */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Juba Legal Partners Design System - Professional Legal Theme */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 35 65% 29%;
+    
+    /* Brand Primary */
+    --primary: 35 65% 29%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 35 65% 39%;
+    
+    /* Brand Accent */
+    --accent: 35 65% 29%;
+    --accent-foreground: 0 0% 100%;
+    --accent-dark: 35 65% 19%;
+    
+    /* Neutral Grays */
+    --secondary: 35 10% 96%;
+    --secondary-foreground: 35 65% 29%;
+    --muted: 35 10% 96%;
+    --muted-foreground: 35 20% 46%;
+    
+    /* Card and UI Elements */
+    --card: 0 0% 100%;
+    --card-foreground: 35 65% 29%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 35 65% 29%;
+    
+    /* Interactive Elements */
+    --border: 35 20% 91%;
+    --input: 35 20% 91%;
+    --ring: 35 65% 29%;
+    
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Brand Gradients */
+    --gradient-hero: linear-gradient(135deg, #574013, #7a5c2e);
+    --gradient-accent: linear-gradient(135deg, #7a5c2e, #574013);
+    --gradient-overlay: linear-gradient(135deg, rgba(87, 64, 19, 0.9), rgba(122, 92, 46, 0.8));
+    
+    /* Professional Shadows */
+    --shadow-legal: 0 4px 20px rgba(87, 64, 19, 0.1);
+    --shadow-gold: 0 4px 20px rgba(122, 92, 46, 0.2);
+    --shadow-deep: 0 10px 40px rgba(87, 64, 19, 0.15);
+    
+    /* Animation Variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 35 65% 5%;
+    --foreground: 35 30% 95%;
+
+    --card: 35 65% 5%;
+    --card-foreground: 35 30% 95%;
+
+    --popover: 35 65% 5%;
+    --popover-foreground: 35 30% 95%;
+
+    --primary: 35 30% 95%;
+    --primary-foreground: 35 65% 29%;
+
+    --secondary: 35 30% 15%;
+    --secondary-foreground: 35 30% 95%;
+
+    --muted: 35 30% 15%;
+    --muted-foreground: 35 30% 65%;
+
+    --accent: 35 30% 15%;
+    --accent-foreground: 35 30% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 35 30% 95%;
+
+    --border: 35 30% 15%;
+    --input: 35 30% 15%;
+    --ring: 35 30% 85%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans bg-background text-foreground;
+  }
+}
