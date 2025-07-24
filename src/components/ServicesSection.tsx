@@ -29,6 +29,18 @@ export const services = [
     features: ["Mediation", "Negotiation", "Arbitration"]
   },
   {
+    icon: Banknote,
+    title: "Tax Advisory",
+    description: "Tax planning, compliance, and dispute resolution for businesses and individuals.",
+    features: ["Tax Planning", "Compliance", "Dispute Resolution"]
+  },
+  {
+    icon: Users,
+    title: "Employment and Labour Advisory",
+    description: "Guidance on employment law, workplace disputes, and labor rights for employers and employees.",
+    features: ["Employment Contracts", "Labor Disputes", "Workplace Policies"]
+  },
+  {
     icon: Scale,
     title: "Civil Litigation",
     description: "Comprehensive representation in civil matters, protecting your rights and interests in all courts.",
@@ -41,32 +53,20 @@ export const services = [
     features: ["Defense", "Bail Applications", "Appeals"]
   },
   {
-    icon: Briefcase,
-    title: "Commercial Advisory",
-    description: "Business law services including contracts, transactions, and regulatory compliance for companies.",
-    features: ["Business Formation", "Contract Review", "Regulatory Compliance"]
-  },
-  {
     icon: FileText,
     title: "Legal Drafting",
     description: "Drafting of legal opinions, contracts, bills, and constitutions for individuals and organizations.",
     features: ["Contracts", "Legal Opinions", "Bills & Constitutions"]
   },
   {
-    icon: Users,
-    title: "Employment & Labour Advisory",
-    description: "Guidance on employment law, workplace disputes, and labor rights for employers and employees.",
-    features: ["Employment Contracts", "Labor Disputes", "Workplace Policies"]
-  },
-  {
-    icon: Banknote,
-    title: "Tax Advisory",
-    description: "Tax planning, compliance, and dispute resolution for businesses and individuals.",
-    features: ["Tax Planning", "Compliance", "Dispute Resolution"]
+    icon: Newspaper,
+    title: "Media Law Advisory",
+    description: "Legal counsel for media organizations, journalists, and communications professionals.",
+    features: ["Media Compliance", "Defamation", "Broadcast Law"]
   },
   {
     icon: Globe,
-    title: "Humanitarian & Public Law",
+    title: "Humanitarian and Public Law",
     description: "Legal support for NGOs, humanitarian organizations, and public interest litigation.",
     features: ["NGO Support", "Public Interest Cases", "Legal Advocacy"]
   },
@@ -77,20 +77,20 @@ export const services = [
     features: ["Regulatory Advice", "Finance Transactions", "Compliance"]
   },
   {
-    icon: Newspaper,
-    title: "Media Law Advisory",
-    description: "Legal counsel for media organizations, journalists, and communications professionals.",
-    features: ["Media Compliance", "Defamation", "Broadcast Law"]
+    icon: Briefcase,
+    title: "Commercial Advisory",
+    description: "Business law services including contracts, transactions, and regulatory compliance for companies.",
+    features: ["Business Formation", "Contract Review", "Regulatory Compliance"]
   },
   {
     icon: Handshake,
-    title: "Public Relations & Lobby",
+    title: "Public Relations and Lobby",
     description: "Strategic PR, government relations, and lobbying for clients in complex regulatory environments.",
     features: ["Government Relations", "Lobbying", "PR Strategy"]
   },
   {
     icon: Scale,
-    title: "Oil & Gas",
+    title: "Oil and Gas",
     description: "Specialized legal services for oil, gas, and extractive industries, including contracts and compliance.",
     features: ["Contract Drafting", "Regulatory Compliance", "Industry Advisory"]
   }

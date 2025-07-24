@@ -1,56 +1,42 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Award, Users, Building } from "lucide-react";
+import { Calendar, Award, Users, Building, Scale, ShieldCheck, Megaphone, Star } from "lucide-react";
 
 const milestones = [
   {
-    year: "2010",
-    title: "Foundation",
-    description: "Akumric Law House was established with a vision to provide excellent legal services across South Sudan.",
+    year: "1987",
+    title: "Founding in Khartoum, Sudan",
+    description: "Justice Mareu D. Malual-Akumric establishes the law chamber, laying the foundation for a legacy of legal excellence.",
     icon: Building,
     category: "Founding"
   },
   {
-    year: "2012",
-    title: "First Major Case Victory",
-    description: "Won landmark constitutional law case that set precedent for future civil rights litigation.",
+    year: "1990-2003",
+    title: "Public Service & Judiciary",
+    description: "Justice Mareu serves as Director of Public Prosecution, State Minister, and later as President of the High Court of South Sudan.",
     icon: Award,
-    category: "Achievement"
+    category: "Leadership"
   },
   {
-    year: "2015",
-    title: "Team Expansion",
-    description: "Expanded to include specialized departments for Oil & Gas, Employment Law, and Media Law.",
+    year: "2003-2020",
+    title: "Judicial Leadership",
+    description: "Justice Mareu leads the judiciary, culminating in his role as President of the High Court until 2020.",
+    icon: Award,
+    category: "Judiciary"
+  },
+  {
+    year: "2010s",
+    title: "Generational Transition",
+    description: "The 2nd and 3rd generation of the Malual-Akumric family take the helm, expanding the firm's reach and expertise.",
     icon: Users,
-    category: "Growth"
+    category: "Legacy"
   },
   {
-    year: "2018",
-    title: "Malakia Branch Opening",
-    description: "Opened second office in Malakia to better serve clients across different regions.",
-    icon: Building,
-    category: "Expansion"
-  },
-  {
-    year: "2020",
-    title: "Digital Transformation",
-    description: "Implemented modern case management systems and enhanced client service delivery.",
-    icon: Award,
-    category: "Innovation"
-  },
-  {
-    year: "2022",
-    title: "Regional Recognition",
-    description: "Became member of East Africa Law Society, expanding our regional legal network.",
+    year: "2018-Present",
+    title: "Regional Influence & Growth",
+    description: "ALH becomes a leading law firm in South Sudan and East Africa, serving major corporations, NGOs, and international organizations.",
     icon: Award,
     category: "Recognition"
-  },
-  {
-    year: "2024",
-    title: "Excellence in Service",
-    description: "Celebrated over 1000 successful cases across diverse practice areas.",
-    icon: Award,
-    category: "Milestone"
   }
 ];
 
@@ -58,22 +44,22 @@ const values = [
   {
     title: "Justice",
     description: "We believe in upholding justice and fairness in all our legal endeavors, ensuring equal representation for all clients.",
-    icon: "⚖️"
+    icon: Scale
   },
   {
     title: "Integrity",
     description: "Our practice is built on unwavering integrity, transparency, and ethical conduct in all professional relationships.",
-    icon: "🛡️"
+    icon: ShieldCheck
   },
   {
     title: "Advocacy",
     description: "We are passionate advocates for our clients' rights, combining legal expertise with cultural understanding.",
-    icon: "📢"
+    icon: Megaphone
   },
   {
     title: "Excellence",
     description: "We strive for excellence in every case, continuously improving our skills and knowledge to serve our clients better.",
-    icon: "⭐"
+    icon: Star
   }
 ];
 
@@ -87,8 +73,7 @@ const HistorySection = () => {
             Our Heritage
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Since our establishment, Akumric Law House has been at the forefront of legal excellence in South Sudan, 
-            building a legacy of justice, integrity, and unwavering commitment to our clients.
+            Akumric Law House (ALH) was founded in 1987 by Justice Mareu D. Malual-Akumric in Khartoum, Sudan. The firm’s legacy is rooted in decades of legal excellence, public service, and leadership in South Sudan’s legal community. Today, ALH is managed by the 2nd and 3rd generation of the Malual-Akumric family, continuing a tradition of legal service, advocacy, and innovation. The firm has played a pivotal role in shaping the legal landscape of South Sudan, advising on landmark cases, legislative drafting, and supporting both public and private sector clients.
           </p>
         </div>
 
@@ -101,38 +86,33 @@ const HistorySection = () => {
                   <h3 className="text-2xl font-bold text-brand mb-6">Our Story</h3>
                   <div className="space-y-4 text-muted-foreground">
                     <p className="leading-relaxed">
-                      Akumric Law House was founded on the principles of justice, integrity, and advocacy - values that 
-                      continue to guide our practice today. What began as a small legal practice has grown into one of 
-                      South Sudan's most respected law firms.
+                      Akumric Law House (ALH) began its journey in 1987, founded by Justice Mareu D. Malual-Akumric. Over the years, the firm has grown under the stewardship of the Malual-Akumric family, with a strong commitment to justice, integrity, and advocacy. Justice Mareu’s distinguished career included serving as Director of Public Prosecution, State Minister, and President of the High Court of South Sudan until 2020.
                     </p>
                     <p className="leading-relaxed">
-                      Our journey is rooted in the Akumric family's commitment to legal excellence, with multiple generations 
-                      of lawyers contributing to the rich legal heritage of South Sudan. We have witnessed and participated 
-                      in the country's legal evolution, adapting our practice to meet the changing needs of our clients.
+                      Today, ALH is recognized as a leading law firm in South Sudan and the East African region, providing specialized legal services to major corporations, NGOs, and international organizations. The firm’s expertise spans oil and gas, commercial law, employment, taxation, media, and more, serving clients across diverse sectors.
                     </p>
                     <p className="leading-relaxed">
-                      Today, we serve individuals, corporations, NGOs, and government institutions, providing comprehensive 
-                      legal solutions across diverse practice areas while maintaining our founding commitment to justice and integrity.
+                      With a team of highly qualified partners and associates, ALH is known for its integrity, professionalism, and commitment to delivering pragmatic legal solutions tailored to client needs.
                     </p>
                   </div>
                 </div>
                 <div className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center p-4 bg-secondary rounded-lg">
-                      <div className="text-2xl font-bold text-brand mb-1">15+</div>
-                      <div className="text-sm text-muted-foreground">Years of Service</div>
+                      <div className="text-2xl font-bold text-brand mb-1">1987</div>
+                      <div className="text-sm text-muted-foreground">Year Founded</div>
+                    </div>
+                    <div className="text-center p-4 bg-secondary rounded-lg">
+                      <div className="text-2xl font-bold text-brand mb-1">3</div>
+                      <div className="text-sm text-muted-foreground">Generations of Lawyers</div>
+                    </div>
+                    <div className="text-center p-4 bg-secondary rounded-lg">
+                      <div className="text-2xl font-bold text-brand mb-1">12+</div>
+                      <div className="text-sm text-muted-foreground">Practice Areas</div>
                     </div>
                     <div className="text-center p-4 bg-secondary rounded-lg">
                       <div className="text-2xl font-bold text-brand mb-1">1000+</div>
                       <div className="text-sm text-muted-foreground">Cases Handled</div>
-                    </div>
-                    <div className="text-center p-4 bg-secondary rounded-lg">
-                      <div className="text-2xl font-bold text-brand mb-1">12</div>
-                      <div className="text-sm text-muted-foreground">Practice Areas</div>
-                    </div>
-                    <div className="text-center p-4 bg-secondary rounded-lg">
-                      <div className="text-2xl font-bold text-brand mb-1">2</div>
-                      <div className="text-sm text-muted-foreground">Office Locations</div>
                     </div>
                   </div>
                 </div>
@@ -185,17 +165,22 @@ const HistorySection = () => {
         <div>
           <h3 className="text-2xl font-bold text-brand text-center mb-12">Our Core Values</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <Card key={index} className="text-center hover:shadow-gold hover:border-brand/50 transition-all duration-300 hover:-translate-y-2">
-                <CardContent className="p-6">
-                  <div className="text-4xl mb-4">{value.icon}</div>
-                  <h4 className="text-lg font-bold text-brand mb-3">{value.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {value.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+            {values.map((value, index) => {
+              const Icon = value.icon;
+              return (
+                <Card key={index} className="text-center hover:shadow-gold hover:border-brand/50 transition-all duration-300 hover:-translate-y-2">
+                  <CardContent className="p-6">
+                    <div className="flex justify-center mb-4">
+                      <Icon className="h-10 w-10 text-gold" />
+                    </div>
+                    <h4 className="text-lg font-bold text-brand mb-3">{value.title}</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {value.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
 
@@ -208,12 +193,12 @@ const HistorySection = () => {
             As we continue to grow and evolve, our commitment to justice, integrity, and advocacy remains unwavering. 
             Let us be part of your legal journey.
           </p>
-          <button
-            onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
+          <a
+            href="/contact"
             className="inline-block bg-white text-brand font-semibold px-6 py-3 rounded shadow hover:bg-white/90 transition-colors duration-200"
           >
             Work With Us
-          </button>
+          </a>
         </div>
       </div>
     </section>

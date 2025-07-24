@@ -1,92 +1,56 @@
 import React from 'react';
-import reechImage from '../assets/reech md.png';
-import aminImage from '../assets/Amin.jpg';
-import wolImage from '../assets/Wol Deng.png';
-
-const leaders = [
-  {
-    name: 'Adv. Reech M. D. Malual-Akumric',
-    title: 'Managing Partner, Head of PR and ADR',
-    image: reechImage,
-  },
-  {
-    name: 'Adv. Amin M. Malual-Akumric',
-    title: 'Senior Partner, Head of Contracts',
-    image: aminImage,
-  },
-  {
-    name: 'Adv. Wol D. A. Chan',
-    title: 'Head of Litigation and Practice',
-    image: wolImage,
-  },
-];
-
-const values = [
-  {
-    icon: 'fas fa-handshake',
-    title: 'Trust',
-    description: 'Ethical, transparent, and client-focused legal practice since 1987.'
-  },
-  {
-    icon: 'fas fa-briefcase',
-    title: 'Experience',
-    description: 'Multi-generational expertise in South Sudanese and regional law.'
-  },
-  {
-    icon: 'fas fa-globe-africa',
-    title: 'Local Understanding',
-    description: 'Deep roots in Juba and a profound grasp of local and regional legal needs.'
-  },
-];
+import { Card, CardContent } from '@/components/ui/card';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-16 md:py-24 bg-white text-brand">
+    <section id="about" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-12">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-brand mb-4">About Akumric Law House</h2>
-          <p className="text-lg md:text-xl mb-4">
-            Founded in 1987 by Justice Mareu D. Malual-Akumric, Akumric Law House is a leading law firm in Juba, South Sudan, with a legacy of excellence spanning generations. Our firm is managed by the 2nd and 3rd generation of the Malual-Akumric family, upholding a tradition of justice, integrity, and advocacy.
-          </p>
-          <p className="text-base text-brand/80 mb-2">
-            We provide specialized legal services to individuals, corporations, government, and non-profit organizations across a wide range of fields, including oil and gas, commercial law, taxation, employment, alternative dispute resolution, and litigation. Our team’s deep local knowledge and regional influence in Eastern Africa position us as trusted advisors for complex legal matters.
-          </p>
-          <p className="text-base text-brand/80">
-            Akumric Law House is recognized for its ethical practice, client care, and commitment to delivering pragmatic legal solutions that shape the future of South Sudan.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Akumric Law House (ALH) is a leading law firm based in Juba, Republic of South Sudan, with a legacy dating back to 1987. Founded by Justice Mareu D. Malual-Akumric, the firm is now managed by the 2nd and 3rd generation of the Malual-Akumric family. ALH is recognized for its local and regional influence across Eastern Africa, providing specialized legal services to major corporations, NGOs, and international organizations.
           </p>
         </div>
-        {/* Meet Our Leaders */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-semibold text-center text-brand mb-6">Meet Our Leaders</h3>
-          <div className="flex flex-col sm:flex-row justify-center gap-8">
-            {leaders.map((leader, idx) => (
-              <div key={idx} className="flex flex-col items-center bg-brand/5 rounded-lg p-4 shadow-md w-full sm:w-64">
-                <div className="w-40 h-48 relative mb-3">
-                  <img 
-                    src={leader.image} 
-                    alt={leader.name} 
-                    className="w-full h-full rounded-lg object-cover object-[center_15%]" 
-                  />
-                  <div className="absolute inset-0 rounded-lg border-4 border-brand"></div>
-                </div>
-                <div className="font-bold text-brand text-lg mb-1">{leader.name}</div>
-                <div className="text-brand text-sm font-medium text-center">{leader.title}</div>
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <Card>
+            <CardContent className="p-8">
+              <h3 className="text-xl font-bold text-brand mb-2">Our Legacy</h3>
+              <p className="text-muted-foreground mb-4">
+                Established in 1987 by Justice Mareu D. Malual-Akumric, ALH has grown through generations, maintaining a strong commitment to justice, integrity, and advocacy. Justice Mareu’s distinguished career included serving as Director of Public Prosecution, State Minister, and President of the High Court of South Sudan until 2020.
+              </p>
+              <p className="text-muted-foreground">
+                Today, ALH is managed by the 2nd and 3rd generation of the Malual-Akumric family, continuing a tradition of legal service, advocacy, and innovation. The firm has played a pivotal role in shaping the legal landscape of South Sudan, advising on landmark cases, legislative drafting, and supporting both public and private sector clients.
+              </p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="p-8">
+              <h3 className="text-xl font-bold text-brand mb-2">Practice Areas</h3>
+              <ul className="list-disc pl-5 text-muted-foreground mb-4">
+                <li>Oil & Gas</li>
+                <li>Mining</li>
+                <li>Commercial Law</li>
+                <li>Taxation & Employment Law</li>
+                <li>Investment Law</li>
+                <li>Alternative Dispute Resolution (Lobby, Mediation, Negotiation, Arbitration)</li>
+                <li>Civil & Criminal Litigation</li>
+                <li>Real Estate</li>
+                <li>Legal Drafting (Opinions, Bills, Constitutions)</li>
+                <li>Media & Telecoms Law</li>
+                <li>Public Relations & Lobbying</li>
+              </ul>
+              <h3 className="text-xl font-bold text-brand mb-2">Reputation</h3>
+              <p className="text-muted-foreground">
+                ALH is highly regarded as one of South Sudan’s premier law chambers, known for its ethical, client-focused, and pragmatic legal services. The firm’s lawyers possess deep expertise in the South Sudanese market, making them trusted advisors for complex legal matters.
+              </p>
+            </CardContent>
+          </Card>
         </div>
-        {/* Values Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto bg-brand-gradient rounded-xl p-4">
-          {values.map((value, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center bg-white/80 rounded-lg p-6 shadow transition-all hover:bg-white hover:text-brand hover:shadow-lg"
-            >
-              <i className={`${value.icon} text-brand text-4xl mb-3`}></i>
-              <div className="font-semibold text-brand text-lg mb-1">{value.title}</div>
-              <div className="text-brand/80 text-center text-sm">{value.description}</div>
-            </div>
-          ))}
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-brand mb-4">Our Clients</h3>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
+            ALH serves a diverse clientele, including major corporations, NGOs, and international organizations such as Trinity Energy, UNESCO South Sudan, UNDP South Sudan, Defy Hate Now (East Africa), MGurush, Gourmet Services Co. Ltd, Specialist Services Ltd, Easy Services Co. Ltd (ESICO), Yo’Care South Sudan, Rak Media, and Screen of Rights.
+          </p>
         </div>
       </div>
     </section>

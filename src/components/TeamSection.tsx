@@ -83,80 +83,80 @@ const TeamSection = () => {
             <Link key={index} to={`/team/${member.id}`}>
               <Card className="overflow-hidden hover:shadow-brand transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-brand-gradient cursor-pointer">
                 <CardContent className="p-0">
-                <div className="md:flex">
-                  {/* Photo */}
-                  <div className="w-full md:w-1/3 relative">
-                    <div className="aspect-[3/4] md:aspect-auto md:h-full">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="absolute inset-0 w-full h-full object-cover object-[center_15%] md:object-center border-b-4 md:border-b-0 md:border-r-4 border-brand"
-                      />
+                  <div className="md:flex">
+                    {/* Photo */}
+                    <div className="w-full md:w-1/3 relative">
+                      <div className="aspect-[3/4] md:aspect-auto md:h-full">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="absolute inset-0 w-full h-full object-cover object-[center_15%] md:object-center border-b-4 md:border-b-0 md:border-r-4 border-brand"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="md:w-2/3 p-6">
-                    <h3 className="text-xl font-bold text-brand mb-1">
-                      {member.name}
-                    </h3>
-                    <p className="text-brand font-medium mb-4">
-                      {member.title}
-                    </p>
                     
-                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                      {member.bio}
-                    </p>
+                    {/* Content */}
+                    <div className="md:w-2/3 p-6">
+                      <h3 className="text-xl font-bold text-brand mb-1">
+                        {member.name}
+                      </h3>
+                      <p className="text-brand font-medium mb-4">
+                        {member.title}
+                      </p>
+                      
+                      <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                        {member.bio}
+                      </p>
 
-                    {/* Education */}
-                    <div className="mb-3">
-                      <h4 className="text-sm font-semibold text-brand mb-1">Education</h4>
-                      <p className="text-xs text-muted-foreground">{member.education}</p>
-                    </div>
+                      {/* Education */}
+                      <div className="mb-3">
+                        <h4 className="text-sm font-semibold text-brand mb-1">Education</h4>
+                        <p className="text-xs text-muted-foreground">{member.education}</p>
+                      </div>
 
-                    {/* Experience & Bar */}
-                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      {/* Experience & Bar */}
+                      <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                          <h4 className="text-sm font-semibold text-brand mb-1">Experience</h4>
+                          <p className="text-xs text-muted-foreground">{member.experience}</p>
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-semibold text-brand mb-1">Bar Membership</h4>
+                          <p className="text-xs text-muted-foreground">{member.barMembership}</p>
+                        </div>
+                      </div>
+
+                      {/* Specialties */}
                       <div>
-                        <h4 className="text-sm font-semibold text-brand mb-1">Experience</h4>
-                        <p className="text-xs text-muted-foreground">{member.experience}</p>
+                        <h4 className="text-sm font-semibold text-brand mb-2">Specialties</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {member.specialties.map((specialty, idx) => (
+                            <Badge key={idx} variant="outline" className="text-xs">
+                              {specialty}
+                            </Badge>
+                          ))}
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="text-sm font-semibold text-brand mb-1">Bar Membership</h4>
-                        <p className="text-xs text-muted-foreground">{member.barMembership}</p>
-                      </div>
-                    </div>
 
-                    {/* Specialties */}
-                    <div>
-                      <h4 className="text-sm font-semibold text-brand mb-2">Specialties</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {member.specialties.map((specialty, idx) => (
-                          <Badge key={idx} variant="outline" className="text-xs">
-                            {specialty}
-                          </Badge>
-                        ))}
+                      {/* Contact */}
+                      <div className="flex items-center space-x-4 mt-4 pt-4 border-t border-brand/10">
+                        <a
+                          href={`mailto:${member.email}`}
+                          className="text-brand hover:text-brand-light transition-colors"
+                        >
+                          <Mail className="h-4 w-4" />
+                        </a>
+                        <a
+                          href="https://linkedin.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-brand hover:text-brand-light transition-colors"
+                        >
+                          <Linkedin className="h-4 w-4" />
+                        </a>
                       </div>
-                    </div>
-
-                    {/* Contact */}
-                    <div className="flex items-center space-x-4 mt-4 pt-4 border-t border-brand/10">
-                      <a
-                        href={`mailto:${member.email}`}
-                        className="text-brand hover:text-brand-light transition-colors"
-                      >
-                        <Mail className="h-4 w-4" />
-                      </a>
-                      <a
-                        href="https://linkedin.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-brand hover:text-brand-light transition-colors"
-                      >
-                        <Linkedin className="h-4 w-4" />
-                      </a>
                     </div>
                   </div>
-                </div>
                 </CardContent>
               </Card>
             </Link>
