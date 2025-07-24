@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Linkedin, Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import reechImage from '../assets/Rech Akumric.png';
 import aminImage from '../assets/Amin.jpg';
 import wolImage from '../assets/Wol Deng.png';
@@ -8,6 +9,7 @@ import bolImage from '../assets/Bol.jpg';
 
 const teamMembers = [
   {
+    id: "reech-akumric",
     name: "Adv. Reech M. D. Malual-Akumric",
     title: "Managing Partner, Head of PR and ADR",
     image: reechImage,
@@ -20,6 +22,7 @@ const teamMembers = [
     bio: "Reech is a multi-award-winning lawyer, journalist, and author with over 15 years of experience in legal practice and media. He is a fellow of the US Institute of Peace, a Young African Leader, and has served as Deputy Spokesperson of the South Sudan Bar Association."
   },
   {
+    id: "amin-akumric",
     name: "Adv. Amin M. Malual-Akumric",
     title: "Senior Partner, Head of Contracts",
     image: aminImage,
@@ -32,6 +35,7 @@ const teamMembers = [
     bio: "Amin has practiced law for over fifteen years, specializing in contracts, procurement, and litigation. He manages the Malakia branch and is a second-generation lawyer of the Akumric family."
   },
   {
+    id: "wol-chan",
     name: "Adv. Wol D. A. Chan",
     title: "Head of Litigation and Practice",
     image: wolImage,
@@ -44,6 +48,7 @@ const teamMembers = [
     bio: "Wol is a criminal litigation expert with over 12 years of experience in Africa and India. He is a commissioner for oaths and currently sits on the Central Committee of the South Sudan Bar Association."
   },
   {
+    id: "bol-ayii",
     name: "Adv. Bol Madut Ayii",
     title: "Head of Oil and Gas",
     image: bolImage,
@@ -75,8 +80,9 @@ const TeamSection = () => {
         {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {teamMembers.map((member, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-brand transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-brand-gradient">
-              <CardContent className="p-0">
+            <Link key={index} to={`/team/${member.id}`}>
+              <Card className="overflow-hidden hover:shadow-brand transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-brand-gradient cursor-pointer">
+                <CardContent className="p-0">
                 <div className="md:flex">
                   {/* Photo */}
                   <div className="w-full md:w-1/3 relative">
@@ -151,8 +157,9 @@ const TeamSection = () => {
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
 

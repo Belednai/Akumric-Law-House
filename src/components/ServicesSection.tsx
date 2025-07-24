@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { 
   Gavel, 
   Scale, 
@@ -15,7 +16,12 @@ import {
   ArrowRight 
 } from "lucide-react";
 
-const services = [
+// Create URL-friendly slugs for each service
+const createSlug = (title: string) => {
+  return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+};
+
+export const services = [
   {
     icon: Gavel,
     title: "Alternative Dispute Resolution",
@@ -97,7 +103,7 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-brand mb-4">
-            Our Legal Services
+            Practice Expertise
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Comprehensive legal solutions tailored to meet the diverse needs of individuals, 
@@ -108,38 +114,43 @@ const ServicesSection = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <Card 
+            <Link 
               key={index} 
-              className="group hover:shadow-gold hover:border-brand/50 transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+              to={`/practice-areas/${createSlug(service.title)}`}
+              className="group block"
             >
-              <CardHeader className="pb-4">
-                <service.icon className="h-10 w-10 text-brand mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <CardTitle className="text-lg text-brand group-hover:text-brand-light transition-colors">
-                  {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                  {service.description}
-                </p>
-                <ul className="space-y-2 mb-4">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="text-xs text-muted-foreground flex items-center">
-                      <div className="w-1.5 h-1.5 bg-brand rounded-full mr-2"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="w-full text-brand hover:text-white hover:bg-brand group-hover:bg-brand group-hover:text-white"
-                >
-                  Learn More
-                  <ArrowRight className="ml-2 h-3 w-3" />
-                </Button>
-              </CardContent>
-            </Card>
+              <Card className="h-full hover:shadow-gold hover:border-brand/50 transition-all duration-300 hover:-translate-y-2 cursor-pointer">
+                <CardHeader className="pb-4">
+                  <service.icon className="h-10 w-10 text-brand mb-4 group-hover:scale-110 transition-transform duration-300" />
+                  <CardTitle className="text-lg text-brand group-hover:text-brand-light transition-colors">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0 flex flex-col justify-between flex-1">
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                      {service.description}
+                    </p>
+                    <ul className="space-y-2 mb-4">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="text-xs text-muted-foreground flex items-center">
+                          <div className="w-1.5 h-1.5 bg-brand rounded-full mr-2"></div>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="w-full text-brand hover:text-white hover:bg-brand group-hover:bg-brand group-hover:text-white"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-3 w-3" />
+                  </Button>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
 
@@ -152,12 +163,11 @@ const ServicesSection = () => {
             Don't see the specific service you need? Our experienced legal team can handle 
             a wide range of legal matters. Contact us for a consultation.
           </p>
-          <Button 
-            variant="consultation"
-            onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            Book Consultation
-            <ArrowRight className="ml-2 h-4 w-4" />
+          <Button variant="consultation" asChild>
+            <Link to="/contact">
+              Book Consultation
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
           </Button>
         </div>
       </div>

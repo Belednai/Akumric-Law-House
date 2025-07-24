@@ -70,7 +70,13 @@ export default {
 					DEFAULT: '#574013',
 					light: '#7a5c2e',
 					dark: '#2e210a',
+					darker: '#1a1408'
 				},
+				gold: {
+					DEFAULT: '#d4af37',
+					dark: '#b8941f',
+					light: '#f4e85a'
+				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -109,6 +115,14 @@ export default {
 				'scale-in': {
 					'0%': { opacity: '0', transform: 'scale(0.95)' },
 					'100%': { opacity: '1', transform: 'scale(1)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+					'50%': { transform: 'translateY(-20px) rotate(5deg)' }
+				},
+				'float-delayed': {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+					'50%': { transform: 'translateY(-15px) rotate(-3deg)' }
 				}
 			},
 			animation: {
@@ -116,7 +130,9 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-up': 'slide-up 0.6s ease-out',
-				'scale-in': 'scale-in 0.4s ease-out'
+				'scale-in': 'scale-in 0.4s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'float-delayed': 'float-delayed 8s ease-in-out infinite 2s'
 			},
 			fontFamily: {
 				sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
