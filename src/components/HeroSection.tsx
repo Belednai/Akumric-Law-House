@@ -1,10 +1,13 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Scale, Gavel, Landmark, Shield } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import backImage from '../assets/back.jpg';
 import rechAkumricImage from '../assets/Rech Akumric.png';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="hero" className="relative flex items-center justify-center min-h-screen text-white overflow-hidden">
       {/* Background Image with Overlay */}
@@ -90,10 +93,7 @@ const HeroSection = () => {
               <Button 
                 size="lg"
                 className="bg-gold hover:bg-gold-dark text-brand font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.location.href = '/contact';
-                }}
+                onClick={() => navigate('/contact')}
               >
                 Book Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -103,10 +103,7 @@ const HeroSection = () => {
                 variant="outline"
                 size="lg"
                 className="border-white text-white bg-transparent hover:bg-white hover:text-brand font-semibold px-8 py-4 rounded-lg transition-all duration-300"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.location.href = '/services';
-                }}
+                onClick={() => navigate('/services')}
               >
                 Our Expertise
               </Button>
