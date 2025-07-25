@@ -2,10 +2,11 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Scale, Gavel, Landmark, Shield } from "lucide-react";
 import backImage from '../assets/back.jpg';
+import rechAkumricImage from '../assets/Rech Akumric.png';
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative flex flex-col items-center justify-center min-h-screen text-white overflow-hidden">
+    <section id="hero" className="relative flex items-center justify-center min-h-screen text-white overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -14,117 +15,149 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
         />
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         {/* Brand gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand/20 via-transparent to-brand-dark/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-brand/30 via-transparent to-transparent"></div>
       </div>
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-10">
-        {/* Geometric Shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-gold/10 rounded-full blur-lg animate-bounce"></div>
-        <div className="absolute bottom-32 left-20 w-40 h-40 bg-white/3 rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-28 h-28 bg-gold/5 rounded-full blur-xl animate-bounce"></div>
-        
         {/* Legal Pattern Overlay */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/4 left-1/4 transform -rotate-12">
             <Scale className="w-16 h-16 text-white animate-float" />
           </div>
-          <div className="absolute top-1/3 right-1/4 transform rotate-12">
-            <Gavel className="w-14 h-14 text-gold animate-float-delayed" />
-          </div>
           <div className="absolute bottom-1/3 left-1/3 transform rotate-6">
             <Landmark className="w-12 h-12 text-white animate-float" />
-          </div>
-          <div className="absolute bottom-1/4 right-1/3 transform -rotate-6">
-            <Shield className="w-18 h-18 text-gold animate-float-delayed" />
           </div>
         </div>
 
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       </div>
 
-      {/* Main Content */}
-      <div className="relative z-20 flex flex-col items-center text-center max-w-4xl mx-auto px-4 py-8">
-        {/* Main Heading */}
-        <div className="mb-6">
-          <div className="text-lg md:text-xl font-semibold text-gold mb-2 tracking-wide">
-            AKUMRIC LAW HOUSE
-          </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-white leading-tight drop-shadow-lg">
-            Justice.{" "}
-            <span className="text-gold">Integrity.</span>{" "}
-            <br className="hidden md:block" />
-            Advocacy.
-          </h1>
-        </div>
-
-        {/* Subheading */}
-        <p className="text-lg md:text-xl mb-8 font-medium text-white/90 max-w-3xl leading-relaxed drop-shadow">
-          Representing individuals, corporations, and institutions with excellence across South Sudan. 
-          Your trusted partner for comprehensive legal solutions.
-        </p>
-
-        {/* Statistics */}
-        <div className="grid grid-cols-3 gap-8 mb-10 text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-gold drop-shadow">15+</div>
-            <div className="text-sm text-white/80">Years Experience</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-gold drop-shadow">1000+</div>
-            <div className="text-sm text-white/80">Cases Won</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-gold drop-shadow">12</div>
-            <div className="text-sm text-white/80">Practice Areas</div>
-          </div>
-        </div>
-
-        {/* Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 items-center">
-          <Button 
-            size="lg"
-            className="bg-gold hover:bg-gold-dark text-brand font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = '/contact';
-            }}
-          >
-            Book Consultation
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+      {/* Main Content Container */}
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 py-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           
-          <Button 
-            variant="outline"
-            size="lg"
-            className="border-white text-white bg-transparent hover:bg-white hover:text-brand font-semibold px-8 py-4 rounded-lg transition-all duration-300"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = '/services';
-            }}
-          >
-            Practice Expertise
-          </Button>
-        </div>
+          {/* Left Content */}
+          <div className="space-y-6 text-left ml-6 lg:ml-12">
+            {/* Tagline */}
+            <div className="inline-flex items-center gap-2 bg-gold/10 backdrop-blur-sm border border-gold/20 rounded-full px-4 py-2">
+              <div className="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
+              <span className="text-gold font-medium text-sm tracking-wide">Since 1987</span>
+            </div>
 
-        {/* Contact Info */}
-        <div className="mt-8 flex items-center justify-center gap-8 text-sm text-white/80">
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
-            <span>Available 24/7</span>
+            {/* Main Heading */}
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                <span className="text-gold">Delivering</span><br />
+                <span className="text-white">Standardized</span><br />
+                <span className="text-white">Legal Services</span>
+              </h1>
+              
+              <div className="flex items-center gap-3 text-lg md:text-xl font-semibold text-gold">
+                <Gavel className="w-6 h-6" />
+                <span>AKUMRIC LAW HOUSE</span>
+              </div>
+            </div>
+
+            {/* Subheading */}
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
+              <span className="text-gold font-semibold">In South Sudan & Beyond</span> - 
+              Representing individuals, corporations, and institutions with excellence and integrity. 
+              Your trusted partner for comprehensive legal solutions.
+            </p>
+
+            {/* Statistics */}
+            <div className="flex gap-6 pt-4">
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-gold">38+</div>
+                <div className="text-sm text-white/80">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-gold">1000+</div>
+                <div className="text-sm text-white/80">Cases Handled</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-gold">12+</div>
+                <div className="text-sm text-white/80">Practice Areas</div>
+              </div>
+            </div>
+
+            {/* Call to Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <Button 
+                size="lg"
+                className="bg-gold hover:bg-gold-dark text-brand font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = '/contact';
+                }}
+              >
+                Book Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              
+              <Button 
+                variant="outline"
+                size="lg"
+                className="border-white text-white bg-transparent hover:bg-white hover:text-brand font-semibold px-8 py-4 rounded-lg transition-all duration-300"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = '/services';
+                }}
+              >
+                Our Expertise
+              </Button>
+            </div>
+
+            {/* Contact Info */}
+            <div className="flex items-center gap-6 text-sm text-white/80 pt-4">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
+                <span>Available 24/7</span>
+              </div>
+              <a 
+                href="tel:+211920077727" 
+                className="flex items-center gap-2 hover:text-gold transition-colors"
+              >
+                <div className="w-2 h-2 bg-gold rounded-full"></div>
+                <span>+211 920 077 727</span>
+              </a>
+            </div>
           </div>
-          <div className="hidden sm:block w-px h-4 bg-white/30"></div>
-          <a 
-            href="tel:+211920077727" 
-            className="flex items-center gap-2 hover:text-gold transition-colors"
-          >
-            <div className="w-2 h-2 bg-gold rounded-full"></div>
-            <span>+211 920 077 727</span>
-          </a>
+
+          {/* Right Side - Image */}
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative">
+              {/* Subtle professional frame */}
+              <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent rounded-xl blur-sm"></div>
+              
+              {/* Main image container */}
+              <div className="relative transform hover:scale-105 transition-transform duration-500">
+                <img
+                  src={rechAkumricImage}
+                  alt="Rech Akumric - Managing Partner"
+                  className="w-64 md:w-72 lg:w-80 h-auto object-cover rounded-xl shadow-2xl mix-blend-multiply"
+                  style={{ 
+                    transform: 'scaleX(-1)',
+                    filter: 'contrast(1.1) brightness(1.05)',
+                    background: 'transparent'
+                  }}
+                />
+                
+                {/* Professional title overlay */}
+                <div className="absolute bottom-3 left-3 right-3 bg-black/85 backdrop-blur-sm rounded-lg p-2.5">
+                  <div className="text-gold font-semibold text-base">Rech Akumric</div>
+                  <div className="text-white/90 text-xs">Managing Partner & Senior Advocate</div>
+                </div>
+              </div>
+
+              {/* Minimal decorative elements */}
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-gold/30 rounded-full blur-sm animate-pulse"></div>
+            </div>
+          </div>
         </div>
       </div>
 
