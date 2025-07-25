@@ -250,7 +250,7 @@ const PracticeArea = () => {
                       Call Now
                     </a>
                     <a
-                      href="mailto:akumriclawhouse@gmail.com"
+                      href="mailto:inquiry@akumriclawhouse.com"
                       className="flex items-center justify-center w-full px-4 py-2 border border-brand text-brand hover:bg-brand hover:text-white transition-colors rounded-md"
                     >
                       <Mail className="h-4 w-4 mr-2" />

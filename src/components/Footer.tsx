@@ -43,9 +43,9 @@ const Footer = () => {
                 <Phone className="h-4 w-4 mr-2" />
                 +211 920 077 727
               </a>
-              <a href="mailto:info@akumriclaw.com" className="flex items-center text-white/90 hover:text-white transition-colors">
+              <a href="mailto:inquiry@akumriclawhouse.com" className="flex items-center text-white/90 hover:text-white transition-colors">
                 <Mail className="h-4 w-4 mr-2" />
-                info@akumriclaw.com
+                inquiry@akumriclawhouse.com
               </a>
               <div className="flex items-start text-white/90">
                 <MapPin className="h-4 w-4 mr-2 mt-1 flex-shrink-0" />

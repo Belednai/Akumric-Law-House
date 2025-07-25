@@ -136,12 +136,12 @@ const BookingForm = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <a href="mailto:akumriclawhouse@gmail.com" className="text-accent font-semibold hover:text-accent-dark">
-                    akumriclawhouse@gmail.com
+                  <a href="mailto:inquiry@akumriclawhouse.com" className="text-accent font-semibold hover:text-accent-dark">
+                    inquiry@akumriclawhouse.com
                   </a>
                   <br />
-                  <a href="mailto:rmalual@gmail.com" className="text-accent font-semibold hover:text-accent-dark">
-                    rmalual@gmail.com
+                  <a href="mailto:reech@akumriclawhouse.com" className="text-accent font-semibold hover:text-accent-dark">
+                    reech@akumriclawhouse.com
                   </a>
                 </CardContent>
               </Card>

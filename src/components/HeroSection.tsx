@@ -110,18 +110,38 @@ const HeroSection = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="flex items-center gap-6 text-sm text-white/80 pt-4">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
-                <span>Available 24/7</span>
+            <div className="space-y-3 pt-4">
+              <div className="flex items-center gap-6 text-sm text-white/80">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
+                  <span>Available 24/7</span>
+                </div>
+                <a 
+                  href="tel:+211920077727" 
+                  className="flex items-center gap-2 hover:text-gold transition-colors"
+                >
+                  <div className="w-2 h-2 bg-gold rounded-full"></div>
+                  <span>+211 920 077 727</span>
+                </a>
               </div>
-              <a 
-                href="tel:+211920077727" 
-                className="flex items-center gap-2 hover:text-gold transition-colors"
-              >
-                <div className="w-2 h-2 bg-gold rounded-full"></div>
-                <span>+211 920 077 727</span>
-              </a>
+              
+              {/* Official Emails */}
+              <div className="flex flex-col sm:flex-row gap-4 text-sm">
+                <a 
+                  href="mailto:inquiry@akumriclawhouse.com" 
+                  className="flex items-center gap-2 text-white/80 hover:text-gold transition-colors"
+                >
+                  <div className="w-2 h-2 bg-gold rounded-full"></div>
+                  <span>inquiry@akumriclawhouse.com</span>
+                </a>
+                <a 
+                  href="mailto:reech@akumriclawhouse.com" 
+                  className="flex items-center gap-2 text-white/80 hover:text-gold transition-colors"
+                >
+                  <div className="w-2 h-2 bg-gold rounded-full"></div>
+                  <span>reech@akumriclawhouse.com</span>
+                </a>
+              </div>
             </div>
           </div>
 

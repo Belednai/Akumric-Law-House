@@ -18,7 +18,7 @@ const teamMembers = [
     languages: ["English", "Arabic", "Dinka"],
     barMembership: "South Sudan Bar Association, East Africa Law Society",
     experience: "15+ years",
-    email: "akumriclawhouse@gmail.com",
+    email: "reech@akumriclawhouse.com",
     bio: "Reech is a multi-award-winning lawyer, journalist, and author with over 15 years of experience in legal practice and media. He is a fellow of the US Institute of Peace, a Young African Leader, and has served as Deputy Spokesperson of the South Sudan Bar Association."
   },
   {
@@ -31,7 +31,7 @@ const teamMembers = [
     languages: ["English", "Arabic"],
     barMembership: "South Sudan Bar Association",
     experience: "15+ years",
-    email: "akumriclawhouse@gmail.com",
+    email: "inquiry@akumriclawhouse.com",
     bio: "Amin has practiced law for over fifteen years, specializing in contracts, procurement, and litigation. He manages the Malakia branch and is a second-generation lawyer of the Akumric family."
   },
   {
@@ -44,7 +44,7 @@ const teamMembers = [
     languages: ["English", "Arabic"],
     barMembership: "South Sudan Bar Association (Central Committee)",
     experience: "12+ years",
-    email: "akumriclawhouse@gmail.com",
+    email: "inquiry@akumriclawhouse.com",
     bio: "Wol is a criminal litigation expert with over 12 years of experience in Africa and India. He is a commissioner for oaths and currently sits on the Central Committee of the South Sudan Bar Association."
   },
   {
@@ -57,7 +57,7 @@ const teamMembers = [
     languages: ["English", "Arabic"],
     barMembership: "South Sudan Bar Association",
     experience: "7+ years",
-    email: "akumriclawhouse@gmail.com",
+    email: "inquiry@akumriclawhouse.com",
     bio: "Bol is a career in-house counsel with expertise in oil and gas, labor, and litigation. He has been practicing law since 2017."
   }
 ];
