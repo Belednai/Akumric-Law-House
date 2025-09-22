@@ -2,10 +2,23 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, User, ArrowRight, BookOpen, Scale, Newspaper } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const articles = [
   {
     id: 1,
+    title: "Fictitious Bias: The Critical Role of Negative Critics in Hindering Justice Delivery and The Paramount Importance of Respecting the Authority of Courts in South Sudan",
+    excerpt: "This paper examines the critical importance of respecting the Supreme Court of South Sudan's authority for the nation's stability and democratic consolidation, highlighting the role of negative critics and the dangers of fabricated bias.",
+    content: "Full article content here...",
+    author: "Reech M.D Malual",
+    date: "2022-09-22",
+    category: "Legal Opinions",
+    readTime: "25 min read",
+    tags: ["Constitutional Law", "Judicial Independence", "South Sudan", "Rule of Law", "Justice System"],
+    slug: "fictitious-bias"
+  },
+  {
+    id: 2,
     title: "Understanding Employment Rights in South Sudan's Evolving Legal Landscape",
     excerpt: "A comprehensive guide to the latest developments in employment law and worker protection in South Sudan.",
     content: "Full article content here...",
@@ -16,7 +29,7 @@ const articles = [
     tags: ["Employment Law", "Workers Rights", "Legal Updates"]
   },
   {
-    id: 2,
+    id: 3,
     title: "Oil and Gas Contract Negotiations: Best Practices for South Sudanese Businesses",
     excerpt: "Essential strategies for navigating complex oil and gas contractual arrangements in the current regulatory environment.",
     content: "Full article content here...",
@@ -27,7 +40,7 @@ const articles = [
     tags: ["Oil & Gas", "Contract Law", "Business Advisory"]
   },
   {
-    id: 3,
+    id: 4,
     title: "The Future of Alternative Dispute Resolution in South Sudan",
     excerpt: "Exploring the growing importance of mediation and arbitration as effective alternatives to traditional litigation.",
     content: "Full article content here...",
@@ -41,7 +54,7 @@ const articles = [
 
 const legalOpinions = [
   {
-    id: 4,
+    id: 5,
     title: "Constitutional Implications of Recent Parliamentary Legislation",
     excerpt: "Legal analysis of the constitutional validity and potential impact of recently enacted legislation.",
     content: "Full opinion content here...",
@@ -52,7 +65,7 @@ const legalOpinions = [
     tags: ["Constitutional Law", "Legislation", "Legal Analysis"]
   },
   {
-    id: 5,
+    id: 6,
     title: "Taxation Policy Reform: Implications for Foreign Investment",
     excerpt: "Expert opinion on proposed tax reforms and their potential effects on foreign direct investment in South Sudan.",
     content: "Full opinion content here...",
@@ -63,7 +76,7 @@ const legalOpinions = [
     tags: ["Tax Law", "Foreign Investment", "Policy Analysis"]
   },
   {
-    id: 6,
+    id: 7,
     title: "Media Freedom and Regulatory Compliance: Balancing Act",
     excerpt: "Analysis of the current state of media law and recommendations for balancing press freedom with regulatory requirements.",
     content: "Full opinion content here...",
@@ -77,7 +90,7 @@ const legalOpinions = [
 
 const news = [
   {
-    id: 7,
+    id: 8,
     title: "Akumric Law House Wins Major Oil & Gas Arbitration Case",
     excerpt: "Our firm successfully represented a major international client in a complex arbitration dispute worth $50 million.",
     content: "Full news content here...",
@@ -88,7 +101,7 @@ const news = [
     tags: ["Firm News", "Case Victory", "Oil & Gas"]
   },
   {
-    id: 8,
+    id: 9,
     title: "New Partnership with East Africa Law Society",
     excerpt: "We are proud to announce our strengthened partnership with EALS, expanding our regional legal network.",
     content: "Full news content here...",
@@ -99,7 +112,7 @@ const news = [
     tags: ["Partnerships", "Regional Network", "Professional Development"]
   },
   {
-    id: 9,
+    id: 10,
     title: "Upcoming Legal Workshop on Employment Law Compliance",
     excerpt: "Join us for a comprehensive workshop on the latest employment law requirements for South Sudanese businesses.",
     content: "Full news content here...",
@@ -116,6 +129,17 @@ const allPosts = [...articles, ...legalOpinions, ...news].sort((a, b) =>
 );
 
 const BlogSection = () => {
+  const navigate = useNavigate();
+
+  const handleArticleClick = (article: any) => {
+    if (article.slug) {
+      navigate(`/article/${article.slug}`);
+    } else {
+      // For articles without slugs, use a generic route
+      navigate(`/article/${article.id}`);
+    }
+  };
+
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case "Articles":
@@ -227,7 +251,12 @@ const BlogSection = () => {
                         <Calendar className="h-4 w-4 mr-2" />
                         <span>{formatDate(post.date)}</span>
                       </div>
-                      <Button variant="ghost" size="sm" className="group-hover:text-brand group-hover:bg-brand/10">
+                      <Button 
+                        variant="ghost" 
+                        size="sm" 
+                        className="group-hover:text-brand group-hover:bg-brand/10"
+                        onClick={() => handleArticleClick(post)}
+                      >
                         Read More
                         <ArrowRight className="ml-2 h-3 w-3" />
                       </Button>
@@ -271,7 +300,12 @@ const BlogSection = () => {
                   </p>
                   <div className="flex items-center justify-between text-xs text-muted-foreground">
                     <span>{formatDate(article.date)}</span>
-                    <Button variant="ghost" size="sm" className="h-auto p-0 text-xs group-hover:text-brand">
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      className="h-auto p-0 text-xs group-hover:text-brand"
+                      onClick={() => handleArticleClick(article)}
+                    >
                       Read More →
                     </Button>
                   </div>
@@ -313,7 +347,12 @@ const BlogSection = () => {
                   </p>
                   <div className="flex items-center justify-between text-xs text-muted-foreground">
                     <span>{formatDate(opinion.date)}</span>
-                    <Button variant="ghost" size="sm" className="h-auto p-0 text-xs group-hover:text-brand">
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      className="h-auto p-0 text-xs group-hover:text-brand"
+                      onClick={() => handleArticleClick(opinion)}
+                    >
                       Read More →
                     </Button>
                   </div>
@@ -355,7 +394,12 @@ const BlogSection = () => {
                   </p>
                   <div className="flex items-center justify-between text-xs text-muted-foreground">
                     <span>{formatDate(newsItem.date)}</span>
-                    <Button variant="ghost" size="sm" className="h-auto p-0 text-xs group-hover:text-brand">
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      className="h-auto p-0 text-xs group-hover:text-brand"
+                      onClick={() => handleArticleClick(newsItem)}
+                    >
                       Read More →
                     </Button>
                   </div>

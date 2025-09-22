@@ -12,6 +12,7 @@ import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import PracticeArea from "./pages/PracticeArea";
 import TeamMemberProfile from "./pages/TeamMemberProfile";
+import ArticlePage from "./pages/ArticlePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/practice-areas/:slug" element={<PracticeArea />} />
           <Route path="/history" element={<History />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/article/:slug" element={<ArticlePage />} />
           <Route path="/team" element={<Team />} />
           <Route path="/team/:id" element={<TeamMemberProfile />} />
           <Route path="/contact" element={<Contact />} />
